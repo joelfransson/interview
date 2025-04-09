@@ -8,3 +8,11 @@ It must calculate a factorial and print the result to the screen.
 
 - It must print the whole number, even if its really big.
 - It must not freeze/crash the browser.
+
+## Tests the following
+
+1. Basic JS. Read a value from an input, or make the button clickable.
+2. Solving a simple problem that was likely solved many times before - the factorial. The candidate he can use google to find out what a factorial is. The factorial itself is not the question.
+3. How is it solved? Recursion? Does the candidate understand that it'll overflow? If not, see how the candidate debugs the error.
+4. How does he solve an uncommon problem? The BigInt isn't a typical thing one does in frontend. It's not terribly hard to solve, and it gives good insight into whether the candidate can understand error messages, look for esoteric solution online, etc.
+5. And finally, for the advanced part of the question: does the candidate understand the eventloop and how browsers work? How will he solve the browser locking up? If he just does some async-await, or a setTimeout - he doesn't. He needs to realize that the solution would be either service workers, or to do a generator function with yield return and setTimeout after X iterations in the loop.
