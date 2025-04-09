@@ -1,0 +1,10 @@
+<div>
+  <input
+    type="text"
+    [(ngModel)]="startNumber"
+    (keydown.enter)="calculate()"
+    placeholder="Factorial number..."
+  />
+  <button (click)="calculate()">Calculate</button>
+  <p>Factorial: {{ result }}</p>
+</div>
