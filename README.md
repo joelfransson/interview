@@ -24,7 +24,8 @@ n is the product of all positive integers from 1 to n
 
 n! = n×(n−1)×(n−2)×…×1
 
-Example:
+**Example:**
 
 5! = 5×4×3×2×1 = 120
+
 3! = 3×2×1 = 6
