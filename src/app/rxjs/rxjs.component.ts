@@ -13,11 +13,9 @@ import { take, scan, finalize } from 'rxjs/operators';
 export class RxjsComponent {
   startNumber: number = 0;
   result?: bigint = undefined;
-  calculating = false;
 
   clear() {
     this.result = undefined;
-    this.calculating = false;
   }
 
   calculate() {
@@ -26,14 +24,12 @@ export class RxjsComponent {
       return;
     }
 
-    this.calculating = true;
     this.result = 1n;
 
     interval(0)
       .pipe(
         take(this.startNumber),
-        scan((acc: bigint, i: number) => acc * BigInt(i + 1), 1n),
-        finalize(() => (this.calculating = false))
+        scan((acc: bigint, i: number) => acc * BigInt(i + 1), 1n)
       )
       .subscribe({
         next: (val) => (this.result = val),
